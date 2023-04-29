@@ -1,6 +1,5 @@
 package bank;
 
-import java.nio.file.ProviderMismatchException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;

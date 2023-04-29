@@ -7,6 +7,7 @@ public class Customer {
   private String username;
   private String password;
   private int account_id;
+  private boolean Autnenticate;
   
   public Customer(int Id,String name,String username,String password,int account_id){
     setId(Id);
@@ -14,6 +15,7 @@ public class Customer {
     setUsername(username);
     setAccount_id(account_id);
     setPassword(password);
+    setAuthenticate(false);
   }
 
   public int getId() {
@@ -56,6 +58,15 @@ public class Customer {
     this.account_id = account_id;
   }
 
+
+  public boolean isAuthenticate() {
+    return this.Autnenticate;
+  }
+
+
+  public void setAuthenticate(boolean Autnenticate) {
+    this.Autnenticate = Autnenticate;
+  }
   
 
   public static void main(String[] args){
