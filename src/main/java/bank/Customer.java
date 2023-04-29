@@ -55,5 +55,11 @@ public class Customer {
   public void setAccount_id(int account_id) {
     this.account_id = account_id;
   }
+
+  
+
+  public static void main(String[] args){
+
+  }
   
 }
