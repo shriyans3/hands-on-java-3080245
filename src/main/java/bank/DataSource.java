@@ -57,10 +57,23 @@ public class DataSource {
     }
     return acc;
   }
+
+  public static void updateAccountBalance(int account_id,double balance){
+    String sql3 = "update accounts set balance = ? where id = ?";
+    try(Connection connect = connect();
+    PreparedStatement stmt2 = connect.prepareStatement(sql3)){
+      stmt2.setDouble(1, balance);
+      stmt2.setInt(2, account_id);
+      stmt2.executeUpdate();
+    }
+    catch(Exception e){
+      e.printStackTrace();
+    }
+  }
   public static void main(String[] args){
-    Customer customer = getCustomer("bsuddock1z@oaic.gov.au");
-    System.out.println(customer.getName());
-    Account account = getAccount(customer.getAccount_id());
-    System.out.println(account.getBalance());
+    // Customer customer = getCustomer("bsuddock1z@oaic.gov.au");
+    // System.out.println(customer.getName());
+    // Account account = getAccount(customer.getAccount_id());
+    // System.out.println(account.getBalance());
   }
 }
